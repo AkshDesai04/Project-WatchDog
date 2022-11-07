@@ -20,7 +20,7 @@ public class TakeScreenshot {
                     new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
             BufferedImage Image = r.createScreenCapture(capture);
             ImageIO.write(Image, "png", new File(path));
-            System.out.println("Screenshot saved New");
+            // System.out.println("Screenshot saved New");
         }
         catch (Exception ex) {
             System.out.println(ex);
