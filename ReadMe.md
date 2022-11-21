@@ -4,8 +4,6 @@
 This is a security project meant for checking in on what the device has been used to do.  
 It can be used as a parenting tool or even a tool to check what your classmate did with your laptop when he took it for making his "presentation"  
   
-### Need for the project  
-  
 ### How it works?  
 The project works with 2 major inputs.  
 1. Screenshots  
