@@ -22,7 +22,7 @@ The project in it's current state has the following dependencies...
 ### Installation  
 #### Windows  
 Clone the repository onto your device.  
-Create a file with the extension .vbs and write the following code to it   
+Create a file with the extension .vbs and write the following code to it  
 `CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
   
 ## Road map  
@@ -36,6 +36,7 @@ Create a file with the extension .vbs and write the following code to it
 - [ ] Lock device if unauthorized face is recognized  
 - [ ] Organize the files in a proper folder system  
 - [ ] Restrict access to the files from the user to prevent an attacker from deleting and/or altering files  
+- [ ] Add config file to allow user to manually set the settings or themselves  
   
 ### Known Issues  
 1. The project can only auto-run on startup for windows.  
