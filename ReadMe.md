@@ -28,12 +28,14 @@ Create a file with the extension .vbs and write the following code to it
 ## Road map  
 ### Project progress  
 - [x] Take screenshots at regular intervals  
-- [x] Take webcam images at regular intervals  
+- [ ] Take webcam images at regular intervals  
 - [ ] Key log each key stroke and key combination  
 - [x] Run the project on startup without any obvious signs of it running  
 - [x] Run the project on a single thread so as to reduce performance impact on the system  
 - [ ] Run face recognition on the webcam images  
 - [ ] Lock device if unauthorized face is recognized  
+- [ ] Organize the files in a proper folder system  
+- [ ] Restrict access to the files from the user to prevent an attacker from deleting and/or altering files  
   
 ### Known Issues  
 1. The project can only auto-run on startup for windows.  
