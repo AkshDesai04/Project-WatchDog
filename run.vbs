@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "python C:\Users\Aksh Desai\Code\Project-WatchDog\run.bat",0,True
