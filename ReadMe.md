@@ -33,6 +33,9 @@ Create a file with the extension .vbs and write the following code to it
 2. The project files are not protected by any protection layer (Due to this, anyone can just delete or alter the data)  
   
 ## Contribution rules  
+To contribute to the project, please fork the project and submit any contributions through Pull Requests.  
+Thanks for the contributions :)  
+  
 ## Acknowledgment  
 ### Contributors and Special thanks  
   
