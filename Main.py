@@ -7,14 +7,17 @@ import pyautogui
 import os
 # import face_recognition
 
+# import Config.py
+
 def work():
 	i = ""
 	while True:
 		current_time = datetime.datetime.now()
 		i = str(current_time.day) + "d-" + str(current_time.month) + "m-" + str(current_time.year) + "y---" + str(current_time.hour) + "hours" + "-" + str(current_time.minute) + "-" + "mins" + str(current_time.second) + "-" + "secs"
-		screenshot(i)
+		# screenshot(i) # temp
 		# selfie(i)
-		time.sleep(10)
+		# time.sleep(int(get_text("time")))
+		print(get_text("time"))
 
 def screenshot(i):
 	image = pyautogui.screenshot()
@@ -47,6 +50,18 @@ def screenshot(i):
 # 		results = face_recognition.compare_faces([biden_encoding], unknown_encoding)
 
 # 		print(results)
+
+
+
+
+def get_text(str):
+    f = open("config.config.config", "r")
+    for x in f:
+        if x.startswith(str):
+            return x.split("=")[1].strip()
+    return "output"
+
+
 
 if __name__ == "__main__":
 	t1 = threading.Thread(target=work)

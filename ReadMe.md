@@ -1,15 +1,21 @@
-1. TODO: Make Key logger
-2. TODO: Selfie
-    1. Face Recognition
-    2. Lock Laptop for Blocked People
-        1. Password as a fail safe
-    3. Say hi if allowed user is detected
-3. TODO: Make a UI
-    1. Scrubbable Timeline
-4. Detect shut down(or similar system power events) event
-5. Image Compression
-    1. Inter Frame Image Compression
-    2. Intra Frame Image Compression
-6. Kill switch
-    1. Temporary Kill Switch
-    2. Session Level Kill Switch8
+# Project WatchDog  
+This is a security project meant for checking in on what the device has been used to do.  
+It can be used as a parenting tool or even a tool to check what your classmate did with your laptop when he took it for making his "presentation"  
+
+## Installation 🚀  
+Download the project build from the releases section of this repository.
+Save it to a folder on your device
+Open a text editor and paste the following code in it...  
+> CreateObject("Wscript.Shell").Run "<File Location>",0,True
+
+## Prebuilt Components/Templates 🔥  
+You can checkout prebuilt components and templates by clicking on the menu icon
+on the top left corner of the navbar.
+
+    
+## Save Readme ✨  
+Once you're done, click on the save button to directly save your Readme to your
+project's root directory!
+
+- [ ] Aksh
+- [x] Desai
