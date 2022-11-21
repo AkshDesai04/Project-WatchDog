@@ -39,3 +39,5 @@ Create a file with the extension .vbs and write the following code to it
 ## License  
   
 ## Contact  
+To notify regarding non-fatal issues, please use the Issues section of the repository.  
+For fatal and/or security related issues, please contact me through email at dev.akshdesai@gmail.com  
