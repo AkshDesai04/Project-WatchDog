@@ -25,7 +25,8 @@ Clone the repository onto your device.
 Create a file with the extension .vbs and write the following code to it  
 `CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
 Save the above mentioned file to the location `C:\Users\<User Name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`  
-Save the `run.bat` file to preferably a root location (something like `C:\`) since .vbs files cannot have spaces in their paths. (Issues might arise if `run.bat` is saved in a path which contains spaces such as in user names)  
+Save the `run.bat` file to preferably a root location (something like `C:\`) since .vbs files cannot have spaces in their paths. (Issues might arise If `run.bat` is saved in a path which contains spaces such as in user names)  
+Replace the `<Project Location>` in `run.bat` with the location where the project is saved  
 Set the config.config file to your desired settings (architecture for config.config is not built yet and hence, settings need to be changed manually from the code)  
 Project WatchDog will start running after a restart  
   
