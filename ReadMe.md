@@ -20,7 +20,7 @@ The project in it's current state has the following dependencies...
   
 ## Getting Started  
 ### Installation  
-#### Windows
+#### Windows  
 Clone the repository onto your device.  
 Create a file with the extension .vbs and write the following code to it   
 > CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True  
@@ -34,7 +34,7 @@ Create a file with the extension .vbs and write the following code to it
 - [x] Run the project on a single thread so as to reduce performance impact on the system  
 - [ ] Run face recognition on the webcam images  
 - [ ] Lock device if unauthorized face is recognized  
-
+  
 ### Known Issues  
 1. The project can only auto-run on startup for windows.  
 2. The project files are not protected by any protection layer (Due to this, anyone can just delete or alter the data)  
@@ -46,7 +46,7 @@ Thanks for the contributions :)
 ## Acknowledgment  
 ### Contributors and Special thanks  
 *Yet to define  
-
+  
 ## License  
 *Yet to define  
   
