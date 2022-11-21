@@ -39,6 +39,8 @@ Project WatchDog will start running after a restart
 - [ ] Take webcam images at regular intervals  
 - [ ] Key log each key stroke and key combination  
 - [ ] Run face recognition on the webcam images  
+    - [ ] If new face is detected, save it for admin to later name the face, merge the face or discard the face
+    - [ ] Have a notification saying hi if a known person is detected using the device
 - [ ] Compress existing images on a regular internal to save storage  
 - [ ] Lock device if unauthorized face is recognized  
 - [ ] Organize the files in a proper folder system  
