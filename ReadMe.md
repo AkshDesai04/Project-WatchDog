@@ -55,7 +55,9 @@ Thanks for the contributions :)
   
 ## Acknowledgment  
 ### Contributors and Special thanks  
-*Yet to define  
+<a href="https://github.com/AkshDesai04/Project-WatchDog/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AkshDesai04/Project-WatchDog" />
+</a>  
   
 ## License  
 The project is protected under the [GNU General Public License v3.0](./LICENSE.md)  
