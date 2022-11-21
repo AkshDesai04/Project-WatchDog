@@ -23,7 +23,7 @@ The project in it's current state has the following dependencies...
 #### Windows  
 Clone the repository onto your device.  
 Create a file with the extension .vbs and write the following code to it   
-> CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True  
+`CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
   
 ## Road map  
 ### Project progress  
