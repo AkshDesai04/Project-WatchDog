@@ -24,6 +24,9 @@ The project in it's current state has the following dependencies...
 Clone the repository onto your device.  
 Create a file with the extension .vbs and write the following code to it  
 `CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
+Save the above mentioned file to the location `C:\Users\<User Name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`  
+Set the config.config file to your desired settings  
+Project WatchDog will start running after a restart  
   
 ## Road map  
 ### Project progress  
