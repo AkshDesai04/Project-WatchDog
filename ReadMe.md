@@ -25,7 +25,8 @@ Clone the repository onto your device.
 Create a file with the extension .vbs and write the following code to it  
 `CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
 Save the above mentioned file to the location `C:\Users\<User Name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`  
-Set the config.config file to your desired settings  
+Save the `run.bat` file to preferably a root location (something like `C:\`) since .vbs files cannot have spaces in their paths. (Issues might arise if `run.bat` is saved in a path which contains spaces such as in user names)  
+Set the config.config file to your desired settings (architecture for config.config is not built yet and hence, settings need to be changed manually from the code)  
 Project WatchDog will start running after a restart  
   
 ## Road map  
@@ -33,6 +34,7 @@ Project WatchDog will start running after a restart
 - [x] Run the project on startup without any obvious signs of it running  
 - [x] Run the project on a single thread so as to reduce performance impact on the system  
 - [x] Take screenshots at regular intervals  
+    - [ ] Add support for multiple display screenshots
 - [ ] Take webcam images at regular intervals  
 - [ ] Key log each key stroke and key combination  
 - [ ] Run face recognition on the webcam images  

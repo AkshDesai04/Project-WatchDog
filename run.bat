@@ -1,1 +1,1 @@
-python Main.py
+python "<Project Location>\Main.py"
