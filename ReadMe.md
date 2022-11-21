@@ -8,10 +8,10 @@ It can be used as a parenting tool or even a tool to check what your classmate d
 The project works with 2 major inputs.  
 1. Screenshots  
 2. Webcam  
-The project takes the above mentioned inputs at a regular interval  
-It then runs face recognition on the webcam input and locks the device upon detection of an unauthorized face.  
-Every screenshot and webcam input are saved in a folder on the device.  
-All of the above mentioned tasks happen on a single thread so as to minimize the impact on the device's performance.  
+ - The project takes the above mentioned inputs at a regular interval  
+ - It then runs face recognition on the webcam input and locks the device upon detection of an unauthorized face.  
+ - Every screenshot and webcam input are saved in a folder on the device.  
+ - All of the above mentioned tasks happen on a single thread so as to minimize the impact on the device's performance.  
   
 ### Dependencies  
 The project in it's current state has the following dependencies...  
