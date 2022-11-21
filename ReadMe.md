@@ -50,7 +50,7 @@ Thanks for the contributions :)
 *Yet to define  
   
 ## License  
-*Yet to define  
+The project is protected under the GNU General Public License v3.0  
   
 ## Contact  
 To notify regarding non-fatal issues, please use the Issues section of the repository.  
