@@ -23,19 +23,19 @@ The project in it's current state has the following dependencies...
 ## Getting Started  
 ### Installation  
 #### Windows
-Clone the repository onto your device.    
+Clone the repository onto your device.  
 Create a file with the extension .vbs and write the following code to it   
 > CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True  
   
 ## Road map  
 ### Project progress  
-- [x] Take screenshots at regular intervals
-- [x] Take webcam images at regular intervals
-- [ ] Key log each key stroke and key combination
-- [x] Run the project on startup without any obvious signs of it running
-- [x] Run the project on a single thread so as to reduce performance impact on the system
-- [ ] Run face recognition on the webcam images
-- [ ] Lock device if unauthorized face is recognized
+- [x] Take screenshots at regular intervals  
+- [x] Take webcam images at regular intervals  
+- [ ] Key log each key stroke and key combination  
+- [x] Run the project on startup without any obvious signs of it running  
+- [x] Run the project on a single thread so as to reduce performance impact on the system  
+- [ ] Run face recognition on the webcam images  
+- [ ] Lock device if unauthorized face is recognized  
 
 ### Known Issues  
 1. The project can only auto-run on startup for windows.  
@@ -47,8 +47,10 @@ Thanks for the contributions :)
   
 ## Acknowledgment  
 ### Contributors and Special thanks  
-  
+*Yet to define  
+
 ## License  
+*Yet to define  
   
 ## Contact  
 To notify regarding non-fatal issues, please use the Issues section of the repository.  
