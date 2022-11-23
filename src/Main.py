@@ -16,10 +16,12 @@ def work():
 		time.sleep(10)
 
 def screenshot(i):
-	image = pyautogui.screenshot()
-	image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
-	
-	cv2.imwrite("D:\\Shots\\Screenshot---" + i + ".png", image)
+    image = pyautogui.screenshot()
+    image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
+
+    cv2.imwrite("D:\\Shots\\Screenshot---" + i + ".png", image)
+    
+    print("Taking a screenshot")
 
 def selfie(i):
 	print("Taking a selfie")
