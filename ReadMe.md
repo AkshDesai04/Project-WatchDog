@@ -3,7 +3,7 @@
 ## About the project  
 This is a security project meant for checking in on what the device has been used to do.  
 It can be used as a parenting tool or even a tool to check what your classmate did with your laptop when he took it for making his "presentation"  
-  
+   
 ### How it works?  
 The project works with 2 major inputs.  
 1. Screenshots  
@@ -15,21 +15,22 @@ The project works with 2 major inputs.
   
 ### Dependencies  
 The project in it's current state has the following dependencies...  
-1. OpenCV  
-2. face_recognition  
+1. pyautogui  
+2. OpenCV2  
+3. numpy  
   
 ## Getting Started  
 ### Installation  
 #### Windows  
  1. Clone the repository onto your device.  
- 1. Create a file with the extension .vbs and write the following code to it  
- 1. `CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
- 1. Save the above mentioned file to the location `C:\Users\<User Name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`  
- 1. Save the `run.bat` file to preferably a root location (something like `C:\`) since .vbs files cannot have spaces in their paths. (Issues might arise If `run.bat` is saved in a path which contains spaces such as in user names)  
- 1. Replace the `<Project Location>` in `run.bat` with the location where the project is saved  
- 1. Set the config.config file to your desired settings (architecture for config.config is not built yet and hence, settings need to be changed manually from the code)  
- 1. Install the dependencies for the project by running the command `pip install -r requirements.txt`  
- 1. Project WatchDog will start running after a restart  
+ 2. Create a file with the extension .vbs and write the following code to it  
+ 3. `CreateObject("Wscript.Shell").Run "<Location of run.bat>",0,True`  
+ 4. Save the above mentioned file to the location `C:\Users\<User Name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`  
+ 5. Save the `run.bat` file to preferably a root location (something like `C:\`) since .vbs files cannot have spaces in their paths. (Issues might arise If `run.bat` is saved in a path which contains spaces such as in user names)  
+ 6. Replace the `<Project Location>` in `run.bat` with the location where the project is saved  
+ 7. Set the config.config file to your desired settings (architecture for config.config is not built yet and hence, settings need to be changed manually from the code)  
+ 8. Install the dependencies for the project by running the command `pip install -r requirements.txt`  
+ 9. Project WatchDog will start running after a restart  
   
 ## Road map  
 ### Project progress  
