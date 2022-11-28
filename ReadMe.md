@@ -35,12 +35,12 @@ Project WatchDog will start running after a restart
 - [x] Run the project on startup without any obvious signs of it running  
 - [x] Run the project on a single thread so as to reduce performance impact on the system  
 - [x] Take screenshots at regular intervals  
-    - [ ] Add support for multiple display screenshots
+    - [ ] Add support for multiple display screenshots  
 - [ ] Take webcam images at regular intervals  
 - [ ] Key log each key stroke and key combination  
 - [ ] Run face recognition on the webcam images  
-    - [ ] If new face is detected, save it for admin to later name the face, merge the face or discard the face
-    - [ ] Have a notification saying hi if a known person is detected using the device
+    - [ ] If new face is detected, save it for admin to later name the face, merge the face or discard the face  
+    - [ ] Have a notification saying hi if a known person is detected using the device  
 - [ ] Compress existing images on a regular internal to save storage  
 - [ ] Lock device if unauthorized face is recognized  
 - [ ] Organize the files in a proper folder system  

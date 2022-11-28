@@ -1,4 +1,3 @@
-import threading
 import time
 import datetime
 import numpy as np
@@ -44,6 +43,6 @@ def get_text(str):
 
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
 	t1 = threading.Thread(target=work)
 	t1.start()
