@@ -28,6 +28,7 @@ Save the above mentioned file to the location `C:\Users\<User Name>\AppData\Roam
 Save the `run.bat` file to preferably a root location (something like `C:\`) since .vbs files cannot have spaces in their paths. (Issues might arise If `run.bat` is saved in a path which contains spaces such as in user names)  
 Replace the `<Project Location>` in `run.bat` with the location where the project is saved  
 Set the config.config file to your desired settings (architecture for config.config is not built yet and hence, settings need to be changed manually from the code)  
+Install the dependencies for the project by running the command `pip install -r requirments.txt`  
 Project WatchDog will start running after a restart  
   
 ## Road map  
