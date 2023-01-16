@@ -48,6 +48,7 @@ The project in it's current state has the following dependencies...
 - [ ] Organize the files in a proper folder system  
 - [ ] Restrict access to the files from the user to prevent an attacker from deleting and/or altering files  
 - [ ] Add config file to allow user to manually set the settings or themselves  
+- [ ] Detect and record `System Turn on`, `System Shut Down`, `System Reboot`, `System Sleep`, `System Hibernate`, `User Account Lock` and so on  
   
 ### Known Issues  
 1. The project can only auto-run on startup for windows.  

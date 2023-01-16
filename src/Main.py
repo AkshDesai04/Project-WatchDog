@@ -5,35 +5,45 @@ import threading
 import pyautogui
 import cv2
 import numpy as np
+import pylab
+
+path = "D:\\WatchdogTesting\\"
+folder = ""
 
 def work():
 	i = ""
 	while True:
 		current_time = datetime.datetime.now()
-		i = str(current_time.day) + "d-" + str(current_time.month) + "m-" + str(current_time.year) + "y---" + str(current_time.hour) + "hours" + "-" + str(current_time.minute) + "-" + "mins" + str(current_time.second) + "-" + "secs"
-		screenshot(i)
-		selfie(i)
-		time.sleep(10)
+		i = str(current_time.hour) + "hours" + "-" + str(current_time.minute) + "-" + "mins" + str(current_time.second) + "-" + "secs"
+		folder = str(current_time.day) + "d-" + str(current_time.month) + "m-" + str(current_time.year) + "y\\"
+		if not os.path.exists(path + folder):
+			os.makedirs(path + folder)
+			print("making folder")
+		screenshot(i, folder)
+		selfie(i, folder)
+		time.sleep(1)
 
-def screenshot(i):
+def screenshot(i, folder):
     image = pyautogui.screenshot()
     image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
+    cv2.imwrite(path + folder + "\\Screenshot---" + i + ".png", image)
 
-    cv2.imwrite("D:\\Shots\\Screenshot---" + i + ".png", image)
-    
-    print("Taking a screenshot")
+def selfie(i, folder):
+	cam_port = 0
+	cam = cv2.VideoCapture(1,cv2.CAP_DSHOW)
 
-def selfie(i):
-	print("Taking a selfie")
+	result, image = cam.read()
+
+	if result:
+		cv2.imwrite(path + folder + "\\WebCam---" + i + ".png", image)
+	else:
+		print("No image detected. Please! try again")
 
 def compress():
-	print("Compressing images")
+	pass
 
 def face_rec():
-	print("Running face rec")
-
-
-
+	pass
 
 def get_text(str):
     f = open("config.config.config", "r")
