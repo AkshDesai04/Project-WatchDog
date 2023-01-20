@@ -20,17 +20,19 @@ def work():
 			os.makedirs(path + folder)
 			print("making folder")
 		screenshot(i, folder)
-		selfie(i, folder)
+		# selfie(i, folder)
 		time.sleep(1)
 
 def screenshot(i, folder):
     image = pyautogui.screenshot()
     image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)
     cv2.imwrite(path + folder + "\\Screenshot---" + i + ".png", image)
+    print("SS Taken")
 
 def selfie(i, folder):
 	cam_port = 0
 	cam = cv2.VideoCapture(1,cv2.CAP_DSHOW)
+	# cam = cv2.VideoCapture(0)
 
 	result, image = cam.read()
 
@@ -38,6 +40,8 @@ def selfie(i, folder):
 		cv2.imwrite(path + folder + "\\WebCam---" + i + ".png", image)
 	else:
 		print("No image detected. Please! try again")
+
+	print("selfie taken")
 
 def compress():
 	pass
