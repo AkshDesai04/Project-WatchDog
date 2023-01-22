@@ -1,7 +1,7 @@
 import cv2
 
-def selfie(i, folder):
-    cam_port = 0
+
+def selfie(i, folder):  # TODO: Remove parameters coz i and folder are already managed by the Main.py file
     cam = cv2.VideoCapture(0)
     result, image = cam.read()
     if result:
