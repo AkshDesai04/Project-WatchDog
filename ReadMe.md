@@ -52,7 +52,8 @@ The project in it's current state has the following dependencies...
   
 ### Known Issues  
 1. The project can only auto-run on startup for windows.  
-2. The project files are not protected by any protection layer (Due to this, anyone can just delete or alter the data)  
+2. The project files are not protected by any protection layer (Due to this, anyone can just delete or alter the data)
+3. Webcam image capture issue
   
 ## Contribution rules  
 To contribute to the project, please fork the project and submit any contributions through Pull Requests.  
