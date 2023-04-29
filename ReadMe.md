@@ -38,7 +38,7 @@ The project in it's current state has the following dependencies...
 - [x] Run the project on a single thread so as to reduce performance impact on the system  
 - [x] Take screenshots at regular intervals  
     - [ ] Add support for multiple display screenshots  
-- [ ] Take webcam images at regular intervals  
+- [x] Take webcam images at regular intervals  
 - [ ] Key log each key stroke and key combination  
 - [ ] Run face recognition on the webcam images  
     - [ ] If new face is detected, save it for admin to later name the face, merge the face or discard the face  
