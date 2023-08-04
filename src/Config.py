@@ -1,4 +1,4 @@
-class Config:
+class config:
 
     sleep_interval = 10  # in ms
     path = "D:\\WatchdogTesting\\"
