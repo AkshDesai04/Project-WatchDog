@@ -1,6 +1,6 @@
 class Config:
 
-    sleep_interval = 0  # in ms
+    sleep_interval = 10  # in ms
     path = "D:\\WatchdogTesting\\"
     take_selfie = True  # Yet to work on
     take_screenshot = True

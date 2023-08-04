@@ -1,0 +1,1 @@
+echo "Logged in at " %DATE% " " %TIME% >> loginDetails.log

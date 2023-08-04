@@ -1,1 +1,1 @@
-python "<Project Location>\Main.py"
+python "C:\Users\akshd\Code\Project-WatchDog\src\Main.py"
