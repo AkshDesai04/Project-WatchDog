@@ -89,7 +89,7 @@ cam_capture_thread            = threading.Thread(target=Selfie        .start_dat
 process_log_capture_thread    = threading.Thread(target=ProcessDP     .start_data_capture, args=(process_capture_int,)) if process_log_capture    else None
 key_log_capture_thread        = threading.Thread(target=KeyLogging    .start_data_capture)                              if key_log_capture        else None
 login_activity_capture_thread = threading.Thread(target=LoginActivity .start_data_capture)                              if login_activity_capture else None
-face_rec_thread               = threading.Thread(target=FaceRec       .start_face_rec, args=(face_rec_int,))     if face_rec               else None
+face_rec_thread               = threading.Thread(target=FaceRec       .start_face_rec, args=(face_rec_int,))            if face_rec               else None
 
 screen_capture_thread         .start()
 cam_capture_thread            .start()
