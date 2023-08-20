@@ -4,8 +4,6 @@ import time
 import database_operations
 
 
-
-
 def start_data_capture(con, interval):
     while True:
         image = get_processes()
@@ -41,9 +39,5 @@ def get_processes():
 
 def process_changes(old, new):
     pass
-
-
-
-
 
 print(get_processes())

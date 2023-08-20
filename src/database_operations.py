@@ -1,7 +1,20 @@
 import mysql.connector
 
-def create_db(connection, name):
-    pass
+def create_db(connection, name):    #Done
+    mycursor = connection.cursor()
+    sql = f"CREATE DATABASE {name}"
+
+    try:
+        mycursor.execute(sql)
+        connection.commit()
+
+        print("DataBase created successfully!")
+
+    except mysql.connector.Error as err:
+        print("Error:", err)
+
+    mycursor.close()
+    connection.close()
 
 
 def create_table(con, name, fields, type, size):
