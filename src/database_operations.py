@@ -14,12 +14,36 @@ def create_db(connection, name):    #Done
         print("Error:", err)
 
     mycursor.close()
-    connection.close()
 
 
-def create_table(con, name, fields, type, size):
-    #fields, type, and size are arrays
-    pass
+def create_table(connection, name, fields, types, sizes, constraints): #Done
+    mycursor = connection.cursor()
+
+    #For Testing
+    # if len(fields) != len(types) or len(types) != len(sizes) or len(sizes) != len(constraints):
+        # return "Input arrays must have the same length"
+    #For Testing
+
+    descriptions = []
+    for i in range(len(fields)):
+        desc = f"{fields[i]} {types[i]}({sizes[i]})"
+        if constraints[i]:
+            desc += " " + " ".join(constraints[i])
+        descriptions.append(desc)
+    columns = ", ".join(descriptions)
+
+    sql = f"CREATE TABLE {name} (" + columns + ")"
+    try:
+        mycursor.execute(sql)
+        connection.commit()
+        print(sql)
+        
+        print("Table created successfully!")
+
+    except mysql.connector.Error as err:
+        print("Error:", err)
+
+    mycursor.close()
 
 
 def create_connection(host, user, password, database):
