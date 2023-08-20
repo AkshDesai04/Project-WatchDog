@@ -46,14 +46,14 @@ def create_table(conn, name, fields, types, sizes, constraints): #Done
     mycursor.close()
 
 
-def create_conn(host, user, password, database):
-    mydb = mysql.connector.connect(
+def create_conn(host, user, password, database = ""): #Done
+    conn = mysql.connector.connect(
         host      =  host,
         user      =  user,
         password  =  password,
-        database  =  database
+        database = database
     )
-    return mydb
+    return conn
 
 
 def db_insert(conn, table, *data): #Done
