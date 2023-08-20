@@ -91,14 +91,23 @@ def db_insert(conn, table, *data): #Done
     mycursor.close()
 
 
-def db_read(conn, query):
-    mycursor = con.cursor()
-    mycursor.execute(query)
-    myresult = mycursor.fetchall()
+def db_read(conn, query): #Done
+    try:
+        cursor = conn.cursor()
+        cursor.execute(query)
+        
+        if cursor.with_rows:
+            result = cursor.fetchall()
+            if len(result) == 1 and len(result[0]) == 1:
+                return result[0][0]
+            else:
+                return result
+        else:
+            return None
+    except Exception as e:
+        return str(e)
 
-    return mycursor
 
-
-def db_execute_cmd(conn, quercmd):
-    mycursor = con.cursor()
+def db_execute_cmd(conn, cmd):
+    mycursor = conn.cursor()
     mycursor.execute(cmd)
