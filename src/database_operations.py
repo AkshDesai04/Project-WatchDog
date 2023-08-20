@@ -1,6 +1,8 @@
 import mysql.connector
 
-def create_db(conn, name):    #Done
+
+
+def create_db(conn, name): #Done
     mycursor = conn.cursor()
     sql = f"CREATE DATABASE {name}"
 
