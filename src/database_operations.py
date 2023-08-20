@@ -108,6 +108,12 @@ def db_read(conn, query): #Done
         return str(e)
 
 
-def db_execute_cmd(conn, cmd):
-    mycursor = conn.cursor()
-    mycursor.execute(cmd)
+def db_execute_cmd(conn, cmd): #Done
+    try:
+        cursor = conn.cursor()
+        cursor.execute(cmd)
+        conn.commit()
+        return True
+    except Exception as e:
+        print(f"Error: {e}")
+        return False
