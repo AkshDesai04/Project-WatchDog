@@ -22,39 +22,37 @@ def create_conn(name): #Works
     return conn
 
 
-def db_insert(table, *data): #ReadyToTest NoUpdatesMade Unsure
+def db_insert(conn, table, data): #ReadyToTest NoUpdatesMade Unsure
     curr = conn.cursor()
-    
-    _fields = []
-    _datas = []
 
-    for key, value in data.items():
-        _fields.append(key)
-        if isinstance(value, str):
-            _datas.append(f"'{value}'")
-        else:
-            _datas.append(str(value))
+    _data = ""
 
-    fields = ", ".join(_fields)
-    datas = ", ".join(_datas)
-    print(fields)
-    print(datas)
+    for i in range(len(data)):
+        _data = _data + ("\'" if type(_data) is str else "") + str(data[i]) + ("\'" if type(_data) is str else "") + ", "
+        print("data so far: ", _data)
 
-    sql = f"insert into {table} ({fields}) values ({datas})"
+    _data = _data[:len(_data) - 2]
+
+    print("data", data)
+    print("_data" + _data)
+
+    sql = f"insert into {table} values ({_data});"
+    print("Running: ", sql)
 
     try:
+        print("inserting")
         curr.execute(sql)
+        print("inserted")
+        print("committing")
         conn.commit()
+        print("committed")
         print("sql: " + sql)
-        print("fields: " + fields)
-        print("datas: " + datas)
+        print("datas: ", data)
         
         print("Data inserted!")
 
-    except mysql.connector.Error as err:
-        print("Error:", err)
-
-    curr.close()
+    except Exception as err:
+        print("Error: ", err)
 
 
 def db_read(conn, query): #ReadyToTest
@@ -126,8 +124,6 @@ def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
 
 #Testing Playground
 
-# create_db('test_db.db')
-# create_table(create_conn('test_db.db'), 'TestTable', ['id', 'name', 'number'], ['number', 'varchar2', 'number'], [3, 30, 10], ['primary key', 'not null', 'unique'])
-print(create_conn('test_db.db'))
+db_insert(create_conn('test_db.db'), 'TestTable', [101, 'Nitya Naik', 1234567890])
 
 #Testing Playground
