@@ -105,7 +105,7 @@ def db_insert(table, *data): #ReadyToTest NoUpdatesMade Unsure
     curr.close()
 
 
-def db_read(conn, query): #Work edOn
+def db_read(conn, query): #ReadyToTest
     curr = conn.cursor()
     curr.execute(query)
     return curr.fetchall()
