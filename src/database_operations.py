@@ -2,19 +2,6 @@
 import sqlite3
 
 def create_db(name): #Works
-    # mycursor = conn.cursor()
-    # sql = f"CREATE DATABASE {name}"
-    #
-    # try:
-    #     mycursor.execute(sql)
-    #     conn.commit()
-    #
-    #     print("DataBase created successfully!")
-    #
-    # except mysql.connector.Error as err:
-    #     print("Error:", err)
-    #
-    # mycursor.close()
     connection = sqlite3.connect(name)
 
 
