@@ -22,35 +22,20 @@ def create_conn(name): #Works
     return conn
 
 
-def db_insert(conn, table, data): #ReadyToTest NoUpdatesMade Unsure
+def db_insert(conn, table, data): #Works
     curr = conn.cursor()
 
     _data = ""
 
     for i in range(len(data)):
         _data = _data + ("\'" if type(_data) is str else "") + str(data[i]) + ("\'" if type(_data) is str else "") + ", "
-        print("data so far: ", _data)
-
     _data = _data[:len(_data) - 2]
 
-    print("data", data)
-    print("_data" + _data)
-
     sql = f"insert into {table} values ({_data});"
-    print("Running: ", sql)
 
     try:
-        print("inserting")
         curr.execute(sql)
-        print("inserted")
-        print("committing")
         conn.commit()
-        print("committed")
-        print("sql: " + sql)
-        print("datas: ", data)
-        
-        print("Data inserted!")
-
     except Exception as err:
         print("Error: ", err)
 
