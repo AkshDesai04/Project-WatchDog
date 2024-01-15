@@ -1,116 +1,52 @@
-import mysql.connector
+# import mysql.connector
+import sqlite3
+
+def create_db(name): #Works
+    connection = sqlite3.connect(name)
 
 
+def create_table(conn, name, fields, types, sizes, constraints): #Works
+    curr = conn.cursor()
+    curr.execute(f"drop table if exists {name}")
 
-def create_db(conn, name): #Done
-    mycursor = conn.cursor()
-    sql = f"CREATE DATABASE {name}"
+    query = f"create table {name} ("
+    for i in range(0, len(fields)):
+        query = f"\n{query} {fields[i]} {types[i]}({sizes[i]}) {constraints[i]},"
+    query = f"{query[:len(query) - 1]} );"
 
-    try:
-        mycursor.execute(sql)
-        conn.commit()
+    print(query)
+    conn.execute(query)
 
-        print("DataBase created successfully!")
-
-    except mysql.connector.Error as err:
-        print("Error:", err)
-
-    mycursor.close()
-
-
-def create_table(conn, name, fields, types, sizes, constraints): #Done
-    mycursor = conn.cursor()
-
-    #For Testing
-    # if len(fields) != len(types) or len(types) != len(sizes) or len(sizes) != len(constraints):
-        # return "Input arrays must have the same length"
-    #For Testing
-
-    descriptions = []
-    for i in range(len(fields)):
-        desc = f"{fields[i]} {types[i]}({sizes[i]})"
-        if constraints[i]:
-            desc += " " + " ".join(constraints[i])
-        descriptions.append(desc)
-    columns = ", ".join(descriptions)
-
-    sql = f"CREATE TABLE {name} (" + columns + ")"
-    try:
-        mycursor.execute(sql)
-        conn.commit()
-        print(sql)
-        
-        print("Table created successfully!")
-
-    except mysql.connector.Error as err:
-        print("Error:", err)
-
-    mycursor.close()
-
-
-def create_conn(host, user, password, database = ""): #Done
-    conn = mysql.connector.connect(
-        host      =  host,
-        user      =  user,
-        password  =  password,
-        database = database
-    )
+def create_conn(name): #Works
+    conn = sqlite3.connect(name)
     return conn
 
 
-def db_insert(conn, table, *data): #Done
-    mycursor = conn.cursor()
-    
-    _fields = []
-    _datas = []
+def db_insert(conn, table, data): #Works
+    curr = conn.cursor()
 
-    for key, value in data.items():
-        _fields.append(key)
-        if isinstance(value, str):
-            _datas.append(f"'{value}'")
-        else:
-            _datas.append(str(value))
+    _data = ""
 
-    fields = ", ".join(_fields)
-    datas = ", ".join(_datas)
-    print(fields)
-    print(datas)
+    for i in range(len(data)):
+        _data = _data + ("\'" if type(_data) is str else "") + str(data[i]) + ("\'" if type(_data) is str else "") + ", "
+    _data = _data[:len(_data) - 2]
 
-    sql = f"insert into {table} ({fields}) values ({datas})"
+    sql = f"insert into {table} values ({_data});"
 
     try:
-        mycursor.execute(sql)
+        curr.execute(sql)
         conn.commit()
-        print("sql: " + sql)
-        print("fields: " + fields)
-        print("datas: " + datas)
-        
-        print("Data inserted!")
-
-    except mysql.connector.Error as err:
-        print("Error:", err)
-
-    mycursor.close()
+    except Exception as err:
+        print("Error: ", err)
 
 
-def db_read(conn, query): #Done
-    try:
-        cursor = conn.cursor()
-        cursor.execute(query)
-        
-        if cursor.with_rows:
-            result = cursor.fetchall()
-            if len(result) == 1 and len(result[0]) == 1:
-                return result[0][0]
-            else:
-                return result
-        else:
-            return None
-    except Exception as e:
-        return str(e)
+def db_read(conn, query): #ReadyToTest
+    curr = conn.cursor()
+    curr.execute(query)
+    return curr.fetchall()
 
 
-def db_execute_cmd(conn, cmd): #Done
+def db_execute_cmd(conn, cmd): #Works
     try:
         cursor = conn.cursor()
         cursor.execute(cmd)
