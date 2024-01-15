@@ -55,42 +55,6 @@ def db_execute_cmd(conn, cmd): #Works
     except Exception as e:
         print(f"Error: {e}")
         return False
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Testing Playground
 
 print(db_read(create_conn('test_db.db'), "select * from TestTable"))
