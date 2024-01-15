@@ -127,7 +127,7 @@ def db_read(conn, query): #ReadyToTest
 
 
 
-def db_execute_cmd(conn, cmd): #Pending
+def db_execute_cmd(conn, cmd): #ReadyToTest Unsure LessChangesMade
     try:
         cursor = conn.cursor()
         cursor.execute(cmd)
