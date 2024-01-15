@@ -18,13 +18,6 @@ def create_table(conn, name, fields, types, sizes, constraints): #Works
     conn.execute(query)
 
 def create_conn(name): #Works
-    # conn = mysql.connector.connect(
-    #     host      =  host,
-    #     user      =  user,
-    #     password  =  password,
-    #     database = database
-    # )
-    # return conn
     conn = sqlite3.connect(name)
     return conn
 
