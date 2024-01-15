@@ -44,22 +44,6 @@ def db_read(conn, query): #ReadyToTest
     curr = conn.cursor()
     curr.execute(query)
     return curr.fetchall()
-    # try:
-    #     curr = conn.cursor()
-    #     curr.execute(query)
-    #
-    #     if cursor.with_rows:
-    #         result = cursor.fetchall()
-    #         if len(result) == 1 and len(result[0]) == 1:
-    #             return result[0][0]
-    #         else:
-    #             return result
-    #     else:
-    #         return None
-    # except Exception as e:
-    #     return str(e)
-
-
 
 
 def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
