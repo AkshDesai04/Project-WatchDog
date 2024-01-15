@@ -17,7 +17,7 @@ def create_table(conn, name, fields, types, sizes, constraints): #Works
     print(query)
     conn.execute(query)
 
-def create_conn(name): #ReadyToTest
+def create_conn(name): #Works
     # conn = mysql.connector.connect(
     #     host      =  host,
     #     user      =  user,
@@ -134,6 +134,7 @@ def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
 #Testing Playground
 
 # create_db('test_db.db')
-create_table(create_conn('test_db.db'), 'TestTable', ['id', 'name', 'number'], ['number', 'varchar2', 'number'], [3, 30, 10], ['primary key', 'not null', 'unique'])
+# create_table(create_conn('test_db.db'), 'TestTable', ['id', 'name', 'number'], ['number', 'varchar2', 'number'], [3, 30, 10], ['primary key', 'not null', 'unique'])
+print(create_conn('test_db.db'))
 
 #Testing Playground
