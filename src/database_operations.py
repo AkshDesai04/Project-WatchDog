@@ -58,7 +58,7 @@ def create_table(conn, name, fields, types, sizes, constraints): #ReadyToTest
     print(query)
     conn.execute(query)
 
-def create_conn(name): #WorkedOn
+def create_conn(name): #ReadyToTest
     # conn = mysql.connector.connect(
     #     host      =  host,
     #     user      =  user,
