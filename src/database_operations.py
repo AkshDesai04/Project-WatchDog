@@ -6,33 +6,6 @@ def create_db(name): #Works
 
 
 def create_table(conn, name, fields, types, sizes, constraints): #Works
-    # mycursor = conn.cursor()
-    #
-    # #For Testing
-    # # if len(fields) != len(types) or len(types) != len(sizes) or len(sizes) != len(constraints):
-    #     # return "Input arrays must have the same length"
-    # #For Testing
-    #
-    # descriptions = []
-    # for i in range(len(fields)):
-    #     desc = f"{fields[i]} {types[i]}({sizes[i]})"
-    #     if constraints[i]:
-    #         desc += " " + " ".join(constraints[i])
-    #     descriptions.append(desc)
-    # columns = ", ".join(descriptions)
-    #
-    # sql = f"CREATE TABLE {name} (" + columns + ")"
-    # try:
-    #     mycursor.execute(sql)
-    #     conn.commit()
-    #     print(sql)
-    #
-    #     print("Table created successfully!")
-    #
-    # except mysql.connector.Error as err:
-    #     print("Error:", err)
-    #
-    # mycursor.close()
     curr = conn.cursor()
     curr.execute(f"drop table if exists {name}")
 
