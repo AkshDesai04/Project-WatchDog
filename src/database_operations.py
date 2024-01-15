@@ -109,6 +109,7 @@ def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
 
 #Testing Playground
 
-db_insert(create_conn('test_db.db'), 'TestTable', [101, 'Nitya Naik', 1234567890])
+test = db_read(create_conn('test_db.db'), "select * from TestTable where name like 'Aksh%'")
+print(test)
 
 #Testing Playground
