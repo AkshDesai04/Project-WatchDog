@@ -46,7 +46,7 @@ def db_read(conn, query): #ReadyToTest
     return curr.fetchall()
 
 
-def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
+def db_execute_cmd(conn, cmd): #Works
     try:
         cursor = conn.cursor()
         cursor.execute(cmd)
@@ -93,7 +93,8 @@ def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
 
 #Testing Playground
 
-test = db_read(create_conn('test_db.db'), "select * from TestTable where name like 'Aksh%'")
-print(test)
+print(db_read(create_conn('test_db.db'), "select * from TestTable"))
+db_execute_cmd(create_conn('test_db.db'), 'update TestTable set id = 191 where id = 123')
+print(db_read(create_conn('test_db.db'), "select * from TestTable"))
 
 #Testing Playground
