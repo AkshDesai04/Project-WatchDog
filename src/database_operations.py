@@ -1,8 +1,7 @@
 # import mysql.connector
 import sqlite3
 
-
-def create_db(name): #WorkedOn
+def create_db(name): #Works
     # mycursor = conn.cursor()
     # sql = f"CREATE DATABASE {name}"
     #
@@ -136,3 +135,44 @@ def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
     except Exception as e:
         print(f"Error: {e}")
         return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Testing Playground
+
+create_db('test_db.db')
+
+#Testing Playground
