@@ -19,7 +19,7 @@ def create_db(name): #WorkedOn
     connection = sqlite3.connect(name)
 
 
-def create_table(conn, name, fields, types, sizes, constraints): #WorkedOn
+def create_table(conn, name, fields, types, sizes, constraints): #ReadyToTest
     # mycursor = conn.cursor()
     #
     # #For Testing
@@ -105,7 +105,7 @@ def db_insert(table, *data): #WorkedOn NoUpdatesMade
     curr.close()
 
 
-def db_read(conn, query): #WorkedOn
+def db_read(conn, query): #Work edOn
     curr = conn.cursor()
     curr.execute(query)
     return curr.fetchall()
