@@ -5,7 +5,7 @@ def create_db(name): #Works
     connection = sqlite3.connect(name)
 
 
-def create_table(conn, name, fields, types, sizes, constraints): #ReadyToTest
+def create_table(conn, name, fields, types, sizes, constraints): #Works
     # mycursor = conn.cursor()
     #
     # #For Testing
@@ -37,8 +37,8 @@ def create_table(conn, name, fields, types, sizes, constraints): #ReadyToTest
     curr.execute(f"drop table if exists {name}")
 
     query = f"create table {name} ("
-    for i in range(0, fields.size()):
-        query = f"\n{query} {fields[i]} {types[i]}({sizes[i]}) {constraints},"
+    for i in range(0, len(fields)):
+        query = f"\n{query} {fields[i]} {types[i]}({sizes[i]}) {constraints[i]},"
     query = f"{query[:len(query) - 1]} );"
 
     print(query)
@@ -160,6 +160,7 @@ def db_execute_cmd(conn, cmd): #ReadyToTest #Unsure #LessChangesMade
 
 #Testing Playground
 
-create_db('test_db.db')
+# create_db('test_db.db')
+create_table(create_conn('test_db.db'), 'TestTable', ['id', 'name', 'number'], ['number', 'varchar2', 'number'], [3, 30, 10], ['primary key', 'not null', 'unique'])
 
 #Testing Playground
