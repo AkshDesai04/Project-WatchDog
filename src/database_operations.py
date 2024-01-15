@@ -70,7 +70,7 @@ def create_conn(name): #ReadyToTest
     return conn
 
 
-def db_insert(table, *data): #WorkedOn NoUpdatesMade
+def db_insert(table, *data): #ReadyToTest NoUpdatesMade Unsure
     curr = conn.cursor()
     
     _fields = []
