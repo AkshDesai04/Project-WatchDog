@@ -1,7 +1,7 @@
 import psutil
 import datetime
 import time
-import database_operations
+# import database_operations
 
 
 def start_data_capture(con, interval):

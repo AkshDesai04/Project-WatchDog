@@ -23,3 +23,6 @@ def selfie():
     else:
         print("No image detected. Please! try again")
     print("selfie taken")
+
+
+cv2.imwrite("output.png", selfie())
