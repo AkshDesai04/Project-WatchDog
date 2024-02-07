@@ -1,7 +1,7 @@
 import psutil
 import datetime
 import time
-# import database_operations
+import database_operations
 
 
 def start_data_capture(con, interval):
@@ -37,7 +37,29 @@ def get_processes():
     return processes
 
 
-def process_changes(old, new):
-    pass
+def compare_lists(first_list, second_list):
+    stopped = []
+    new = []
 
-print(get_processes())
+    # Find stopped processes
+    for process in first_list:
+        if process not in second_list:
+            stopped.append(process)
+
+    # Find new processes
+    for process in second_list:
+        if process not in first_list:
+            new.append(process)
+
+    return {'stopped': stopped, 'new': new}
+
+
+# print(get_processes())
+a = get_processes()
+print("get next")
+time.sleep(30)
+print("getting next")
+b = get_processes()
+print(a)
+print(b)
+print(compare_lists(a, b))
